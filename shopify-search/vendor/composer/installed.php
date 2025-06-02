@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'v12.0.9',
-        'version' => '12.0.9.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'f38c2645631e1bcecf178ffce86e68c6676f94ad',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -386,9 +386,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v12.0.9',
-            'version' => '12.0.9.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'f38c2645631e1bcecf178ffce86e68c6676f94ad',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -429,6 +429,15 @@
             'install_path' => __DIR__ . '/../laravel/sail',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'laravel/scout' => array(
+            'pretty_version' => 'v10.15.0',
+            'version' => '10.15.0.0',
+            'reference' => '102fe09ae1c045c6f9cf1b3a2234e1fadb2198f2',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/scout',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'laravel/serializable-closure' => array(
             'pretty_version' => 'v2.0.4',
@@ -508,6 +517,15 @@
             'reference' => '08cfc6c4f3d811584fb09c37e2849e6a7f9b0742',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/uri-interfaces',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'meilisearch/meilisearch-php' => array(
+            'pretty_version' => 'v1.14.0',
+            'version' => '1.14.0.0',
+            'reference' => '860c6f81e81abb5040c50031512b21ae59a26a97',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../meilisearch/meilisearch-php',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -615,6 +633,27 @@
             'install_path' => __DIR__ . '/../phar-io/version',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'php-http/async-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
+        'php-http/client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
+        'php-http/discovery' => array(
+            'pretty_version' => '1.20.0',
+            'version' => '1.20.0.0',
+            'reference' => '82fe4c73ef3363caed49ff8dd1539ba06044910d',
+            'type' => 'composer-plugin',
+            'install_path' => __DIR__ . '/../php-http/discovery',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'phpoption/phpoption' => array(
             'pretty_version' => '1.9.3',
@@ -737,6 +776,7 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-factory' => array(
@@ -752,6 +792,7 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/http-message' => array(
@@ -767,6 +808,7 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
+                1 => '*',
             ),
         ),
         'psr/log' => array(
