@@ -71,6 +71,7 @@ class ShopifyProduct extends Model
             'handle' => $this->handle,
             'status' => $this->status,
             'tags' => $this->tags,
+            'price' => !empty($this->variants[0]['price']) ? (float)$this->variants[0]['price'] : 0,
             'created_at' => $this->created_at->timestamp,
             'updated_at' => $this->updated_at->timestamp,
         ];
@@ -103,6 +104,7 @@ class ShopifyProduct extends Model
             'sortableAttributes' => [
                 'created_at',
                 'updated_at',
+                'price',
             ],
             'searchableAttributes' => [
                 'title',
