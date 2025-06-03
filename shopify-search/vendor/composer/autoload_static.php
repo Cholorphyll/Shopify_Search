@@ -539,9 +539,17 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
     );
 
     public static $classMap = array (
+        'App\\Console\\Commands\\Meilisearch\\SetupMeilisearch' => __DIR__ . '/../..' . '/app/Console/Commands/Meilisearch/SetupMeilisearch.php',
+        'App\\Http\\Controllers\\Api\\ProductSearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ProductSearchController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\ShopifyWebhookController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShopifyWebhookController.php',
+        'App\\Http\\Middleware\\VerifyShopifyWebhook' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyShopifyWebhook.php',
+        'App\\Jobs\\RemoveProductFromMeilisearch' => __DIR__ . '/../..' . '/app/Jobs/RemoveProductFromMeilisearch.php',
+        'App\\Jobs\\SyncProductWithMeilisearch' => __DIR__ . '/../..' . '/app/Jobs/SyncProductWithMeilisearch.php',
+        'App\\Models\\ShopifyProduct' => __DIR__ . '/../..' . '/app/Models/ShopifyProduct.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -661,6 +669,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\ShopifyProductsTableSeeder' => __DIR__ . '/../..' . '/database/seeders/ShopifyProductsTableSeeder.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
         'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',

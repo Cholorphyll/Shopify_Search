@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProductSearchController;
+use App\Http\Controllers\Api\ShopifyWebhookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,11 @@ Route::prefix('v1')->group(function () {
     Route::get('/products/search', [ProductSearchController::class, 'search'])->name('api.products.search');
     
     // Add more API endpoints here as needed
+
+    // Shopify Webhook Endpoints
+    Route::middleware('shopify.webhook')->group(function () {
+        Route::post('/webhooks/products/create', [ShopifyWebhookController::class, 'handleProductCreate']);
+        Route::post('/webhooks/products/update', [ShopifyWebhookController::class, 'handleProductUpdate']);
+        Route::post('/webhooks/products/delete', [ShopifyWebhookController::class, 'handleProductDelete']);
+    });
 });

@@ -22,7 +22,7 @@ class ProductSearchController extends Controller
         $validator = Validator::make($request->all(), [
             'query' => 'required|string|min:2|max:255',
             'filters' => 'sometimes|array',
-            'sort' => 'sometimes|string|in:price_asc,price_desc,newest,relevance',
+            'sort' => 'sometimes|string|in:relevance,price_asc,price_desc,newest,oldest',
             'per_page' => 'sometimes|integer|min:1|max:100',
             'page' => 'sometimes|integer|min:1',
         ]);
@@ -85,10 +85,11 @@ class ProductSearchController extends Controller
      */
     protected function getSortField(string $sort): string
     {
+        // This method is not called when sort is 'relevance'
         return match ($sort) {
             'price_asc', 'price_desc' => 'price',
-            'newest' => 'created_at',
-            'relevance' => 'created_at', // Fallback to created_at for relevance
+            'newest', 'oldest' => 'created_at',
+            default => 'created_at', // Should not happen due to validation
         };
     }
 
@@ -100,11 +101,11 @@ class ProductSearchController extends Controller
      */
     protected function getSortDirection(string $sort): string
     {
+        // This method is not called when sort is 'relevance'
         return match ($sort) {
-            'price_desc' => 'desc',
-            'price_asc' => 'asc',
-            'newest' => 'desc',
-            default => 'desc',
+            'price_desc', 'newest' => 'desc',
+            'price_asc', 'oldest' => 'asc',
+            default => 'desc', // Should not happen due to validation
         };
     }
 }
